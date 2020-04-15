@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Booking your room ~</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+
+    <!-- 載入燈箱效果 Viewer.js 的 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.5.0/viewer.css">
+
+    <!-- 載入日曆 的 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 載入選擇日期 flatpickr 的 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/flatpickr.css">
+
+    <!-- 載入alert效果 sweetalert2 的 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="room-header js-room-header">
+            <!-- 圖片更換 圖片輪播 -->
+            <ul>
+                <li class="room-header-left"
+                    style="background-image: url('https://images.unsplash.com/photo-1552902019-ebcd97aa9aa0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80');">
+                    <h1>
+                        <a href="roomList.html">
+                            <img src="img/logo_block.svg" alt="logo_block">
+                        </a>
+                    </h1>
+                </li>
+                <li class="room-header-right">
+                    <ul>
+                        <li class="room-header-right-top"
+                            style="background-image: url('https://images.unsplash.com/photo-1552902019-a6dddd56544a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2124&q=80');">
+                        </li>
+                        <li class="room-header-right-bottom"
+                            style="background-image: url('https://images.unsplash.com/photo-1534986622832-777a66b043bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80');">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="js-lightbox">
+                <li>
+                    <img width="100px" height="100px"
+                        src="https://images.unsplash.com/photo-1552902019-ebcd97aa9aa0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80"
+                        alt="imgOne">
+                </li>
+                <li>
+                    <img width="100px" height="100px"
+                        src="https://images.unsplash.com/photo-1552902019-a6dddd56544a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2124&q=80"
+                        alt="imgTwo">
+                </li>
+                <li>
+                    <img width="100px" height="100px"
+                        src="https://images.unsplash.com/photo-1534986622832-777a66b043bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80"
+                        alt="imgThree">
+                </li>
+            </ul>
+        </div>
+        <div class="room-main">
+            <div class="room-main-left js-room-main-left">
+                <!-- 各個房間的標題 name -->
+                <div class="room-main-left-title">Deluxe Twin Room</div>
+                <!-- 各個房間的簡短敘述 descriptionShort -->
+                <div class="room-main-left-descriptionshort">
+                    <!-- GuestMin - GuestMax -->
+                    <p>房客人數限制： 2-4 人</p>
+                    <!-- Bed -->
+                    <p>床型： 豪華雙人床 *2</p>
+                    <!-- Private-Bath -->
+                    <p>衛浴數量： 1 間</p>
+                    <!-- Footage -->
+                    <p>房間大小： 40 平方公尺</p>
+                </div>
+                <!-- 各個房間的敘述 description -->
+                <div class="room-main-left-description">
+                    Deluxe Twin Room is reserved for 2-4 guests. There is a bedroom with two queen size beds and a
+                    private bathroom. Everything you need prepared for you: sheets and blankets, towels, soap and
+                    shampoo, hairdryer are provided. In the room there is AC and of course WiFi.
+                </div>
+                <div class="divider"></div>
+                <div class="room-main-left-check">
+                    <ul>
+                        <li>
+                            <h2>Check In</h2>
+                            <!-- 各個房間的打卡時間 checkInEarly/checkInLate -->
+                            <p>15:00 - 19:00</p>
+                        </li>
+                        <li>
+                            <h2>Check Out</h2>
+                            <!-- 各個房間的退房時間 checkOut -->
+                            <p>11:00</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="room-main-left-amenities">
+                    <ul>
+                        <!-- true:#000000 false:#3a3a3a -->
+                        <!-- 讓 icon 變色 -->
+                        <li><i class="fas fa-wifi js-fas">WiFi</i></li>
+                        <li><i class="fas fa-phone js-fas">電話</i></li>
+                        <li><i class="fas fa-mountain js-fas">漂亮視野</i></li>
+                        <li><i class="fas fa-utensils js-fas">早餐</i></li>
+                        <li><i class="fas fa-wind js-fas">空調</i></li>
+                        <li><i class="fas fa-smoking-ban js-fas">禁止吸煙</i></li>
+                        <li><i class="fas fa-glass-martini-alt js-fas">Bar</i></li>
+                        <li><i class="fas fa-icicles js-fas">冰箱</i></li>
+                        <li><i class="fas fa-baby js-fas">適合兒童</i></li>
+                        <li><i class="fas fa-concierge-bell js-fas">Service</i></li>
+                        <li><i class="fas fa-couch js-fas">沙發</i></li>
+                        <li><i class="fas fa-dog js-fas">寵物攜帶</i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="room-main-medium js-room-main-medium">
+                <ul>
+                    <!-- 各個房間的平日金額 normalDayPrice -->
+                    <li class="room-main-medium-normal js-normal">NT. 3899</li>
+                    <li>平日(一～四)</li>
+                    <!-- 各個房間的假日金額 holidayPrice -->
+                    <li class="room-main-medium-holiday js-holiday">NT. 4000</li>
+                    <li>假日(五～日)</li>
+                </ul>
+            </div>
+            <div class="room-main-right">
+                <!-- 日曆 -->
+                <div class="room-main-right-top">
+                    <!-- Responsive calendar - START -->
+                    <div class="responsive-calendar">
+                        <div class="controls">
+                            <a class="pull-left" data-go="prev">
+                                <div class="btn"><i class="icon-chevron icon-chevron-rotate js-prev"></i></div>
+                            </a>
+                            <h4><span data-head-year></span> <span data-head-month></span></h4>
+                            <a class="pull-right" data-go="next">
+                                <div class="btn"><i class="icon-chevron js-next"></i></div>
+                            </a>
+                        </div>
+                        <hr />
+                        <div class="day-headers">
+                            <div class="day header">Mon</div>
+                            <div class="day header">Tue</div>
+                            <div class="day header">Wed</div>
+                            <div class="day header">Thu</div>
+                            <div class="day header">Fri</div>
+                            <div class="day header">Sat</div>
+                            <div class="day header">Sun</div>
+                        </div>
+                        <div class="days" data-group="days">
+                            <!-- the place where days will be generated -->
+                        </div>
+                    </div>
+                    <!-- Responsive calendar - END -->
+                    <!-- Placeholder -->
+                    <div class="responsive-calendar-placeholder"></div>
+                </div>
+                <div class="room-main-right-bottom">
+                    <!-- 點選按鈕 出現表單 以及 確認訂單狀況 -->
+                    <button type="button" class="room-main-right-bottom-btn js-button">預約時段</button>
+                    <!-- 取消所有訂單 -->
+                    <button type="button" class="room-main-right-bottom-btn js-delete-button">取消所有預約時段</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 預約介面 -->
+        <div class="book-wrap js-book-wrap" style="display: none;">
+            <div class="book-main">
+                <div class="book-div">
+                    <h2>預約時段</h2>
+                </div>
+                <div class="book-div">
+                    <div class="book-div-divider"></div>
+                </div>
+                <div class="book-div">
+                    <label for="bookName">姓名</label>
+                    <input type="text" id="bookName" placeholder="Enter Your Name.." required />
+                </div>
+                <div class="book-div">
+                    <label for="bookPhone">電話</label>
+                    <input type="tel" id="bookPhone" placeholder="Enter Your Tel.." required />
+                </div>
+                <div class="book-div">
+                    <label for="bookDate">預約日期</label>
+                    <input type="text" id="bookDate" class="flatpickr" placeholder="Select Date.." required />
+                </div>
+                <!-- <div class="book-div">
+                    <label for="bookDateStart">預約起日</label>
+                    <input type="date" id="bookDateStart" required />
+                </div>
+                <div class="book-div">
+                    <label for="bookDateEnd">預約迄日</label>
+                    <input type="date" id="bookDateEnd" required />
+                </div> -->
+                <div class="book-div book-div-bg">
+                    <div>
+                        <p>平日時段</p>
+                        <p>假日時段</p>
+                    </div>
+                    <div class="js-night">
+                        <p><span>0</span>夜</p>
+                        <p><span>0</span>夜</p>
+                    </div>
+                </div>
+                <div class="book-div book-div-price js-price">
+                    <div>= NT.0</div>
+                </div>
+                <div class="book-div">
+                    <div>
+                        <button type="button" class="cancel-btn js-cancel-btn">取消</button>
+                    </div>
+                    <div>
+                        <button type="button" class="post-btn js-post-btn">確定預約</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 載入燈箱效果 Viewer.js 的 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.5.0/viewer.js"></script>
+
+    <!-- 載入日曆 的 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/calendar.js"></script>
+
+    <!-- 載入選擇日期 flatpickr 的 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/flatpickr.js"></script>
+
+    <!-- 載入alert效果 sweetalert2 的 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.js"></script>
+
+    <script src="js/room.js"></script>
+
+</body>
+
+</html>

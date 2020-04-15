@@ -1,0 +1,933 @@
+/* CSS Reset */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 程式碼開始 */
+
+* {
+	box-sizing: border-box;
+}
+
+body,
+select,
+button {
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+.wrap {
+	max-width: 1200px;
+	margin: 0 auto;
+	font-size: 14px;
+	color: #000000;
+}
+
+/* index 頁面 */
+
+/* index-bg */
+
+.index-bg {
+	height: 800px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* index-left index-right */
+
+.index-left {
+	display: flex;
+	flex-direction: column;
+	width: 25%;
+	height: 85%;
+	margin-left: 5%;
+	justify-content: space-between;
+}
+
+.index-right {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	height: 85%;
+	justify-content: space-between;
+}
+
+@media(max-width: 768px) {
+	.index-right {
+		width: 60%;
+	}
+}
+
+/* index-left-bottom */
+
+.index-left-bottom {
+	margin-left: 14px;
+}
+
+.index-left-bottom h2 {
+	font-size: 66px;
+	color: #ffffff;
+	background-size: 16px 16px;
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+	background-repeat: repeat-x;
+	background-position: 0% 100%;
+}
+
+.index-left-bottom p {
+	font-size: 24px;
+	color: #ffffff;
+	letter-spacing: 2.5px;
+	line-height: 36px;
+}
+
+/* index-right-top */
+
+.index-right-top ul {
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+	position: relative;
+	/* box-shadow: 25px 25px rgba(255, 255, 255, 0.28); */
+}
+
+.index-right-top ul::after {
+	content: "";
+	width: 90%;
+	height: 20px;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background-color: hsla(0, 0%, 100%, .2);
+	background-image: linear-gradient(45deg, #fff 5%, transparent 0, transparent 45%, #fff 0, #fff 55%, transparent 0, transparent 95%, #fff 0, #fff);
+	background-size: 10px 10px;
+}
+
+.index-right-top ul>li {
+	margin-top: 7%;
+	padding-left: 10%;
+	height: 45px;
+}
+
+.index-right-top ul>li::before {
+	content: "";
+}
+
+.index-right-top ul>li:hover::before {
+	content: "\2013";
+}
+
+.index-right-top a {
+	text-decoration: none;
+	color: #000000;
+}
+
+/* index-right-medium */
+
+.index-right-medium {
+	width: 20%;
+	margin-left: 7%;
+}
+
+.index-right-medium ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.index-right-medium img {
+	width: 20px;
+	height: 20px;
+}
+
+/* index-right-bottom */
+
+.index-right-bottom {
+	width: 90%;
+	margin-left: 7%;
+}
+
+.index-right-bottom ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.index-right-bottom ul>li {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-bottom: 5%;
+	height: 20px;
+	line-height: 20px;
+}
+
+.index-right-bottom img {
+	width: 10%;
+	height: 20px;
+}
+
+.index-right-bottom p {
+	width: 85%;
+	height: 20px;
+	padding-left: 5%;
+	color: #ffffff;
+}
+
+/* roomList 頁面 */
+
+/* roomlist-header */
+
+.roomlist-header {
+	height: 600px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* roomlist-header-top */
+
+.roomlist-header-top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+	margin-bottom: 3%;
+}
+
+/* roomlist-header-bottom */
+
+/* roomlist-header-bottom-left roomlist-header-bottom-right */
+
+.roomlist-header-bottom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+}
+
+.roomlist-header-bottom-left {
+	width: 39%;
+	height: 90px;
+	line-height: 90px;
+	border-right: 2px solid #ffffff;
+}
+
+.roomlist-header-bottom-left ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.roomlist-header-bottom-left img {
+	width: 25px;
+	height: 25px;
+	margin-right: 20px;
+}
+
+.roomlist-header-bottom-right {
+	width: 61%;
+}
+
+.roomlist-header-bottom-right ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.roomlist-header-bottom-right ul>li {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 2% 0;
+}
+
+.roomlist-header-bottom-right img {
+	width: 10%;
+	height: 20px;
+}
+
+.roomlist-header-bottom-right p {
+	width: 85%;
+	height: 20px;
+	padding-left: 5%;
+	color: #ffffff;
+}
+
+@media(max-width: 414px) {
+	.roomlist-header-bottom-left {
+		width: 15%;
+	}
+
+	.roomlist-header-bottom-right {
+		width: 85%;
+	}
+}
+
+/* roomlist-main */
+
+.roomlist-main {
+	width: 90%;
+	position: relative;
+	top: -120px;
+	right: -60px;
+}
+
+.roomlist-main ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.roomlist-main li {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 31%;
+	height: 365px;
+	margin: 1%;
+	/* border: 1px solid blue; */
+}
+
+.roomlist-main-li {
+	box-shadow: 2px 2px 9px 0 rgba(0, 0, 0, 0.18);
+}
+
+@media(max-width: 768px) {
+	.roomlist-main {
+		top: -100px;
+		right: -40px;
+	}
+
+	.roomlist-main li {
+		width: 48%;
+		margin: 1%;
+	}
+}
+
+@media(max-width: 480px) {
+	.roomlist-main {
+		width: 100%;
+		top: 0px;
+		right: 0px;
+	}
+
+	.roomlist-main li {
+		width: 98%;
+		margin: 1% auto;
+	}
+}
+
+/* roomlist-main roomlist-one */
+
+.roomlist-one {
+	width: 100%;
+	height: 365px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.roomlist-one:hover {
+	cursor: pointer;
+}
+
+/* roomlist-main roomlist-two */
+
+.roomlist-two {
+	background-color: #f7f7f7;
+}
+
+.roomlist-main .roomlist-two li {
+	height: 50px;
+	width: 100%;
+}
+
+/* roomlist-main roomlist-two roomlist-two-li-one */
+
+.roomlist-two-li-one {
+	padding: 2% 5%;
+}
+
+/* roomlist-main roomlist-two roomlist-two-li-two */
+
+/* 隱藏 ＆ 顯示 */
+
+.roomlist-two .roomlist-two-li-two {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	display: none;
+}
+
+.roomlist-main-li:hover .roomlist-two-li-two {
+	display: flex;
+}
+
+.roomlist-two .roomlist-two-li-two div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 5%;
+}
+
+.roomlist-two-li-two p {
+	font-size: 12px;
+	color: #6D7278;
+	letter-spacing: 1.25px;
+	line-height: 18px;
+}
+
+.roomlist-two-li-two span {
+	font-size: 21px;
+	color: #000000;
+	letter-spacing: 2.19px;
+	line-height: 18px;
+}
+
+/* room 頁面 */
+
+/* room-header */
+
+.room-header ul {
+	display: flex;
+	flex-direction: row;
+	background: #F7F7F7;
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* room-header room-header-left */
+
+.room-header-left {
+	width: 72%;
+	height: 600px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.room-header-left img {
+	margin: 5%;
+}
+
+/* room-header room-header-right */
+
+.room-header-right ul {
+	display: flex;
+	flex-direction: column;
+}
+
+/* room-header-right-top room-header-right-bottom */
+
+.room-header-right-top,
+.room-header-right-bottom {
+	width: 340px;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+/* room-main */
+
+.room-main {
+	margin: 45px 65px 0 65px;
+	display: flex;
+	flex-direction: row;
+}
+
+/* room-main-left */
+
+.room-main-left {
+	width: 480px;
+	display: flex;
+	flex-direction: column;
+}
+
+.room-main-left-title {
+	font-size: 36px;
+	font-weight: bold;
+	letter-spacing: 3.8px;
+	line-height: 54px;
+	margin-bottom: 30px;
+}
+
+.room-main-left-descriptionshort {
+	letter-spacing: 1.5px;
+	line-height: 31px;
+	margin-bottom: 30px;
+}
+
+.room-main-left-description {
+	font-size: 12px;
+	letter-spacing: 1.3px;
+	line-height: 20px;
+	margin-bottom: 30px;
+}
+
+.divider {
+	width: 100px;
+	height: 10px;
+	background-image: linear-gradient(45deg, #000 5%, transparent 0, transparent 45%, #000 0, #000 55%, transparent 0, transparent 95%, #000 0, #000);
+	background-size: 18px 18px;
+	margin-bottom: 30px;
+}
+
+.room-main-left-check {
+	margin-bottom: 30px;
+}
+
+.room-main-left-check ul {
+	display: flex;
+}
+
+.room-main-left-check ul>li {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.room-main-left-check h2 {
+	letter-spacing: 1.5px;
+	line-height: 20px;
+}
+
+.room-main-left-check p {
+	padding-top: 16px;
+	font-size: 21px;
+	letter-spacing: 2.2px;
+	line-height: 31px;
+}
+
+.room-main-left-amenities {
+	height: 220px;
+	margin-bottom: 70px;
+}
+
+.room-main-left-amenities ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-color: #f0f0f0;
+}
+
+.room-main-left-amenities ul>li {
+	width: 33%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.room-main-left-amenities .fas {
+	height: 45px;
+	line-height: 45px;
+}
+
+.fa-wifi::before,
+.fa-phone::before,
+.fa-mountain::before,
+.fa-utensils::before,
+.fa-wind::before,
+.fa-smoking-ban::before,
+.fa-glass-martini-alt::before,
+.fa-icicles::before,
+.fa-baby::before,
+.fa-concierge-bell::before,
+.fa-couch::before,
+.fa-dog::before {
+	margin-right: 16px;
+}
+
+/* room-main-medium */
+
+.room-main-medium {
+	width: 170px;
+	margin: 0 20px;
+	height: 200px;
+}
+
+.room-main-medium ul {
+	display: flex;
+	flex-direction: column;
+}
+
+.room-main-medium ul>li {
+	width: 100%;
+	line-height: 30px;
+	color: #6d7278;
+	letter-spacing: 1.5px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.room-main-medium .room-main-medium-normal {
+	font-size: 30px;
+	letter-spacing: 3.1px;
+	color: #000000;
+	margin-top: 7%;
+}
+
+.room-main-medium .room-main-medium-holiday {
+	font-size: 16px;
+	letter-spacing: 1.7px;
+	color: #000000;
+	margin-top: 7%;
+}
+
+/* room-main-right */
+
+.room-main-right {
+	width: 380px;
+	display: flex;
+	flex-direction: column;
+}
+
+.room-main-right-top {
+	width: 400px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.room-main-right-bottom {
+	margin-top: 25px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.room-main-right-bottom-btn {
+	width: 145px;
+	height: 55px;
+	background-color: #575757;
+	color: #ffffff;
+	border: none;
+	box-shadow: 10px 10px gray;
+}
+
+.room-main-right-bottom-btn:hover {
+	background-color: #c1c1c1;
+}
+
+.room-main-right-bottom-btn:focus {
+	outline: 0;
+}
+
+/* 預約介面 */
+
+.book-wrap {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.68);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.book-main {
+	width: 425px;
+	height: 423px;
+	background-color: #ffffff;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.book-div {
+	padding: 3%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.book-div-divider {
+	width: 100px;
+	height: 10px;
+	background-image: linear-gradient(45deg, #000 5%, transparent 0, transparent 45%, #000 0, #000 55%, transparent 0, transparent 95%, #000 0, #000);
+	background-size: 26px 26px;
+	margin-bottom: 30px;
+}
+
+.book-div input {
+	border: 1px solid #c9c9c9;
+	border-radius: 5px;
+	width: 60%;
+}
+
+.book-div-bg {
+	background-color: #ededed;
+}
+
+.book-div-bg div p {
+	color: #6d7278;
+	font-size: 12px;
+}
+
+.book-div.book-div-price {
+	display: flex;
+	justify-content: flex-end;
+	font-size: 26px;
+	color: #ff5c5c;
+}
+
+.cancel-btn, .post-btn{
+	width: 80px;
+	height: 35px;
+	border: none;
+	color: #6d7278;
+	background-color: #d8d8d8;
+}
+
+.cancel-btn:hover, .post-btn:hover{
+	color: #ffffff;
+	background-color: #484848;
+}
+
+/* 日曆介面 */
+
+.icon-chevron {
+	display: block;
+	width: 15px;
+	height: 22px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAWCAMAAAAo0TYrAAAAElBMVEX///8AAAAAAAAAAAAAAAAAAABknMCaAAAABXRSTlMAEHCg0O5XV0MAAAAzSURBVHgBYwACJkYGZMDMysKIwmUFCyC4KAIsrKgCjPQQQPCpzUX4B9O/mOGBGV7o4QkA5zcCv3HiEZgAAAAASUVORK5CYII=);
+}
+
+.icon-chevron-rotate {
+	transform: rotate(180deg);
+}
+
+/* .page {
+	width: 500px;
+	margin: 0 auto;
+	padding: 1em;
+} */
+
+.responsive-calendar-modal {
+	background-color: #1d86c8;
+	color: white;
+	padding: 1em;
+}
+
+.responsive-calendar .controls {
+	text-align: center;
+}
+
+.responsive-calendar .controls a {
+	cursor: pointer;
+	color: red;
+}
+
+.responsive-calendar .controls h4 {
+	display: inline;
+}
+
+.responsive-calendar .day-headers,
+.responsive-calendar .days {
+	font-size: 0;
+}
+
+.responsive-calendar .day {
+	display: inline-block;
+	position: relative;
+	font-size: 14px;
+	width: 14.285714285714286%;
+	text-align: center;
+}
+
+.responsive-calendar .day a {
+	color: #000000;
+	display: block;
+	cursor: pointer;
+	padding: 20% 0 20% 0;
+}
+
+.responsive-calendar .day a:hover {
+	background-color: #eee;
+	text-decoration: none;
+}
+
+.responsive-calendar .day.header {
+	border-bottom: 1px gray solid;
+}
+
+.responsive-calendar .day.active a {
+	background-color: #1d86c8;
+	color: #ffffff;
+}
+
+.responsive-calendar .day.active a:hover {
+	background-color: #36a0e2;
+}
+
+.responsive-calendar .day.active .not-current {
+	background-color: #8fcaef;
+	color: #ffffff;
+}
+
+.responsive-calendar .day.active .not-current:hover {
+	background-color: #bcdff5;
+}
+
+.responsive-calendar .day.not-current a {
+	color: #ddd;
+}
+
+.responsive-calendar .day .badge {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	z-index: 1;
+}
+
+.active-day-a{
+	background-image: linear-gradient(45deg, #000 5%, transparent 0, transparent 45%, #000 0, #000 55%, transparent 0, transparent 95%, #000 0, #000);
+	background-size: 8px 8px;
+}
+
+/* SweetAlert2 樣式更改 */
+.swal2-actions{
+	display: flex;
+	justify-content: space-around;
+}
